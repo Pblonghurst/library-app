@@ -11,6 +11,7 @@
       borderRadius: '16px',
       boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
       border: '1px solid #e0e0e0',
+      margin: '32px',
     }"
   >
     <slot></slot>

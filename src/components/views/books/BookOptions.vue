@@ -1,24 +1,26 @@
 <template>
-  <div class="flex items-center gap-4">
-    <Search class="flex-1" :disabled="bookStore.loading" />
-    <Select
-      v-model="sortBy"
-      class="bg-white text-black p-2 rounded-md"
-      :options="sortOptions"
-      option-label="label"
-      option-value="value"
-      placeholder="Sort by..."
-      :disabled="bookStore.loading"
-      :style="{
-        width: '200px',
-        height: '42px',
-        display: 'flex',
-        alignItems: 'center',
-        fontWeight: '700',
-      }"
-    />
-    <!-- view toggle -->
-    <ButtonToggle />
+  <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+    <Search class="flex-1 min-w-0" :disabled="bookStore.loading" />
+    <div class="flex items-center gap-3 sm:gap-4">
+      <Select
+        v-model="sortBy"
+        class="bg-white text-black p-2 rounded-md flex-1 sm:flex-none"
+        :options="sortOptions"
+        option-label="label"
+        option-value="value"
+        placeholder="Sort by..."
+        :disabled="bookStore.loading"
+        :style="{
+          minWidth: '150px',
+          height: '42px',
+          display: 'flex',
+          alignItems: 'center',
+          fontWeight: '700',
+        }"
+      />
+      <!-- view toggle -->
+      <ButtonToggle />
+    </div>
   </div>
 </template>
 <script setup lang="ts">

@@ -4,10 +4,10 @@
     <SideBar />
     <div
       class="flex-1 min-w-0 transition-[margin] duration-300 ease-in-out"
-      :class="dashboardStore.sideBarOpen ? 'ml-72' : 'ml-0'"
+      :class="dashboardStore.sideBarOpen ? 'md:ml-72' : 'ml-0'"
     >
       <NavBar />
-      <div class="max-w-7xl mx-auto p-12">
+      <div class="max-w-7xl mx-auto p-4 sm:p-8 lg:p-12">
         <RouterView />
       </div>
     </div>

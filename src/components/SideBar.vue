@@ -1,7 +1,17 @@
 <template>
+  <!-- Backdrop for mobile -->
   <div
-    class="bg-[#2563eb] text-white flex flex-col justify-between h-screen fixed overflow-hidden transition-[width] duration-300 ease-in-out z-10"
-    :class="dashboardStore.sideBarOpen ? 'w-72' : 'w-0'"
+    v-if="dashboardStore.sideBarOpen"
+    class="fixed inset-0 bg-black/50 z-10 md:hidden"
+    @click="dashboardStore.toggleSideBar"
+  ></div>
+  <div
+    class="bg-[#2563eb] text-white flex flex-col justify-between h-screen fixed overflow-hidden transition-all duration-300 ease-in-out z-20"
+    :class="[
+      dashboardStore.sideBarOpen
+        ? 'w-72 translate-x-0'
+        : 'w-72 -translate-x-full md:w-0 md:translate-x-0',
+    ]"
   >
     <div class="flex flex-col">
       <!-- logo -->

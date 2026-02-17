@@ -1,9 +1,9 @@
 <template>
-  <div class="p-8 flex flex-col">
-    <div class="flex flex-col justify-between items-start gap-10">
-      <div class="flex flex-col gap-3">
+  <div class="p-4 sm:p-8 flex flex-col">
+    <div class="flex flex-col justify-between items-start gap-6 sm:gap-10">
+      <div class="flex flex-col gap-2 sm:gap-3">
         <h1>My Analytics</h1>
-        <p class="text-gray-500">View your book statistics and be blown away.</p>
+        <p class="text-gray-500 text-sm sm:text-base">View your book statistics and be blown away.</p>
       </div>
       <Spinner v-if="loading" class="mt-24 m-auto w-full" />
       <template v-else>
