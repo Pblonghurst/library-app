@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+/* Theme colors */
+:root {
+  --app-primary: #457aee;
+  --app-secondary: #2563eb;
+  --app-active: #fbbf24;
+  --app-gradient: linear-gradient(to right, #667ae5, #744fa7);
+}
+
+#app {
+  /* width: 100%;
+  height: 100%; */
+}
+
+/* Typography */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+a {
+  padding: 18px 24px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  background-color: var(--app-primary);
+}
+
+a.router-link-exact-active,
+a.router-link-exact-active:hover {
+  background-color: var(--app-primary);
+}
+a.router-link-exact-active:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--app-active);
+  transition: 0.3s ease;
+}
+
+/* Buttons */
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
+/* PrimeVue Rating: filled = app active, empty = grey */
+.p-rating .p-rating-on-icon {
+  color: var(--app-active) !important;
+  fill: var(--app-active) !important;
+}
+.p-rating .p-rating-off-icon {
+  color: #9ca3af !important;
+  fill: #9ca3af !important;
+}
