@@ -4,8 +4,11 @@
   >
     <!-- Book info -->
     <div class="flex items-center gap-4">
-      <div class="flex items-center justify-center bg-blue-500 rounded-md p-2 h-20 w-15">
-        <i class="pi pi-book text-white text-center" aria-hidden="true"></i>
+      <div
+        class="flex items-center justify-center rounded-md p-2 h-20 w-15"
+        style="background: var(--app-gradient)"
+      >
+        <i class="pi pi-book text-white" style="font-size: 24px" aria-hidden="true"></i>
       </div>
       <div class="flex flex-col gap-1">
         <div class="flex flex-col gap-0">
@@ -15,8 +18,8 @@
         <div class="flex gap-2 text-sm">
           <p v-if="book.isbn" class="text-gray-500">ISBN: {{ book.isbn }}</p>
           <div v-if="book.comments" class="flex items-center gap-1">
-            <i class="pi pi-comment text-green-700" aria-hidden="true"></i>
-            <p class="text-green-700">Has Notes</p>
+            <i class="pi pi-comment text-green-600" aria-hidden="true"></i>
+            <p class="text-green-600">Has Notes</p>
           </div>
         </div>
       </div>

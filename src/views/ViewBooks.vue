@@ -13,6 +13,7 @@
         severity="primary"
         :disabled="bookStore.loading"
         @click="bookStore.openAddDialog"
+        class="py-2! px-6!"
       />
       <!-- dialogs -->
       <AddBook v-if="bookStore.addBookDialog" />

@@ -26,3 +26,4 @@ C:\Projects\vue-test\library-app\LibraryApi\obj\Debug\net10.0\refint\LibraryApi.
 C:\Projects\vue-test\library-app\LibraryApi\obj\Debug\net10.0\LibraryApi.pdb
 C:\Projects\vue-test\library-app\LibraryApi\obj\Debug\net10.0\LibraryApi.genruntimeconfig.cache
 C:\Projects\vue-test\library-app\LibraryApi\obj\Debug\net10.0\ref\LibraryApi.dll
+C:\Projects\vue-test\library-app\LibraryApi\obj\Debug\net10.0\LibraryApi.sourcelink.json

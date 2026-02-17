@@ -5,7 +5,7 @@
         <h1>My Analytics</h1>
         <p class="text-gray-500">View your book statistics and be blown away.</p>
       </div>
-      <Spinner v-if="loading" />
+      <Spinner v-if="loading" class="mt-24 m-auto w-full" />
       <template v-else>
         <!-- Summary cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">

@@ -9,25 +9,32 @@
       option-value="value"
       placeholder="Sort by..."
       :disabled="bookStore.loading"
-      :style="{ width: '200px', height: '42px', display: 'flex', alignItems: 'center' }"
+      :style="{
+        width: '200px',
+        height: '42px',
+        display: 'flex',
+        alignItems: 'center',
+        fontWeight: '700',
+      }"
     />
-    <SelectButton
-      v-model="viewMode"
-      :options="['gridView', 'listView']"
-      :disabled="bookStore.loading"
-    />
+    <!-- view toggle -->
+    <ButtonToggle />
   </div>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
 import Search from '../../books/Search.vue'
 import Select from 'primevue/select'
-import SelectButton from 'primevue/selectbutton'
 import { useBookStore } from '@/stores/storeBooks'
 import { ref } from 'vue'
+import ButtonToggle from '@/components/ui/ButtonToggle.vue'
 
 const bookStore = useBookStore()
-const viewMode = ref('listView')
+
+const view = ref(false)
+function toggleView() {
+  view.value = !view.value
+}
 
 const sortOptions = [
   { value: '', label: 'All' },
